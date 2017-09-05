@@ -30,6 +30,7 @@ end
 
 def starts_with_consonant? s
   return false unless s and !s.empty?
+  return false unless ("A".."Z").include?(s.chr.capitalize)
   return !VOWELS.include?(s.chr.capitalize)
 end
 
