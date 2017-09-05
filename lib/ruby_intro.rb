@@ -35,7 +35,12 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  return false unless /^[10]*$/.match(s)
+  if (s.length < 2)
+    return s[-1] == "0"
+  else
+    return s[-2,2] == "00"
+  end
 end
 
 # Part 3
